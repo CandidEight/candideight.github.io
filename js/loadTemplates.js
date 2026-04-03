@@ -3,7 +3,7 @@ function loadTemplates() {
 	
 	const headerContainer = document.getElementById('header-container');
 	if (headerContainer) {
-		fetch('templates/header.html')
+		fetch('/skoropol/templates/header.html')
 			.then(response => response.text())
 			.then(html => {
 				headerContainer.innerHTML = html;
@@ -128,7 +128,7 @@ function loadTemplates() {
 	
 	const footerContainer = document.getElementById('footer-container');
 	if (footerContainer) {
-		fetch('templates/footer.html')
+		fetch('/skoropol/templates/footer.html')
 			.then(response => response.text())
 			.then(html => {
 				footerContainer.innerHTML = html;
