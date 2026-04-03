@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Калькулятор стоимости | СКОРОпол</title>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+	<link rel="stylesheet" href="../../style/style.css">
+	<link rel="stylesheet" href="../../style/fonts/fonts.css">
+	<link rel="stylesheet" href="../../style/layout/header.css">
+	<link rel="stylesheet" href="../../style/layout/mobile-nav.css">
+	<link rel="stylesheet" href="../../style/pages/calculation/calculation.css">
+	<link rel="stylesheet" href="../../style/layout/footer.css">
+</head>
+<body>
+	<div id="header-container" class="header--dark"></div>
+
+	<section class="calc-section">
+		<div class="calc-container">
+			<header class="calc-header">
+				<h2>Калькулятор стоимости</h2>
+				<p class="calc-subtitle">сухая стяжка Knauf</p>
+			</header>
+
+			<div class="calc-grid">
+				<div class="calc-item">
+					<span class="calc-item__label">Площадь помещения</span>
+					<div class="calc-item__control">
+						<input type="number" id="square-Meter-input" value="10" min="1" max="1000" step="1">
+						<span class="calc-unit">м²</span>
+					</div>
+					<div class="calc-item__price">
+						<span class="calc-price-value" id="square-price">0</span>
+						<span class="calc-currency">₽</span>
+					</div>
+				</div>
+
+				<div class="calc-item">
+					<span class="calc-item__label">Демонтаж старого пола</span>
+					<div class="calc-item__control">
+						<label class="calc-toggle">
+							<input type="checkbox" id="dismantling-checkbox">
+							<span class="calc-toggle__slider"></span>
+						</label>
+					</div>
+					<div class="calc-item__price">
+						<span class="calc-price-value" id="dismant-price">0</span>
+						<span class="calc-currency">₽</span>
+					</div>
+				</div>
+
+				<div class="calc-item">
+					<span class="calc-item__label">Тип засыпки</span>
+					<div class="calc-item__control">
+						<div class="calc-select">
+							<select id="backfill-select">
+								<option>Без засыпки</option>
+								<option>Фракционная</option>
+								<option>Дробленая</option>
+							</select>
+						</div>
+					</div>
+					<div class="calc-item__price">
+						<span class="calc-price-value" id="backfill-price">0</span>
+						<span class="calc-currency">₽</span>
+					</div>
+				</div>
+
+				<div class="calc-item">
+					<span class="calc-item__label">Слой жесткости XPS</span>
+					<div class="calc-item__control">
+						<div class="calc-select">
+							<select id="layer-Hardening-select">
+								<option>Без жесткости</option>
+								<option>XPS 20 мм</option>
+								<option>XPS 30 мм</option>
+								<option>XPS 50 мм</option>
+							</select>
+						</div>
+					</div>
+					<div class="calc-item__price">
+						<span class="calc-price-value" id="layerHardening-price">0</span>
+						<span class="calc-currency">₽</span>
+					</div>
+				</div>
+
+				<div class="calc-item">
+					<span class="calc-item__label">ГВЛВ Knauf</span>
+					<div class="calc-item__control">
+						<div class="calc-select">
+							<select id="gVLW-select">
+								<option>Без ГВЛВ</option>
+								<option>Кнауф элемент пола ГВЛВ</option>
+								<option>Кнауф лист 10 мм (в 2 слоя)</option>
+								<option>Кнауф лист 12 мм (в 2 слоя)</option>
+							</select>
+						</div>
+					</div>
+					<div class="calc-item__price">
+						<span class="calc-price-value" id="gVLW-price">0</span>
+						<span class="calc-currency">₽</span>
+					</div>
+				</div>
+			</div>
+
+			<footer class="calc-footer">
+				<div class="calc-total">
+					<span class="calc-total__label">Примерная стоимость</span>
+					<div class="calc-total__value">
+						<span class="calc-total__number" id="totalAmountServices">0</span>
+						<span class="calc-total__currency">₽</span>
+					</div>
+				</div>
+				<p class="calc-total__note">Включая материалы и работы</p>
+			</footer>
+			<div class="calc-notice">
+				<div class="calc-notice__icon">
+					<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+						<circle cx="12" cy="12" r="10"/>
+						<path d="M12 8v4M12 16h.01" stroke-linecap="round"/>
+					</svg>
+				</div>
+				<div class="calc-notice__content">
+					<strong>Обратите внимание</strong> — Транспортные расходы по доставке и подъем материалов рассчитываются индивидуально
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<div id="footer-container"></div>
+
+	<script src="../../js/loadTemplates.js"></script>
+	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+	<script src="../../js/pages/calculation.js"></script>
+	<script src="../../js/phone-ripple.js"></script>
+	<script>
+		document.addEventListener('DOMContentLoaded', function() {
+			setTimeout(() => {
+				if (typeof AOS !== 'undefined') {
+					AOS.init({
+						duration: 800,
+						once: true,
+						offset: 100,
+						easing: 'ease-out-cubic'
+					});
+				}
+			}, 500);
+		});
+	</script>
+</body>
+</html>

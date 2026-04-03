@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Листовые материалы | СКОРОпол</title>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+	<link rel="stylesheet" href="../../style/style.css">
+	<link rel="stylesheet" href="../../style/fonts/fonts.css">
+	<link rel="stylesheet" href="../../style/layout/header.css">
+	<link rel="stylesheet" href="../../style/layout/mobile-nav.css">
+	<link rel="stylesheet" href="../../style/pages/products/listovye.css">
+	<link rel="stylesheet" href="../../style/pages/products/product-modal.css">
+	<link rel="stylesheet" href="../../style/layout/footer.css">
+	<link rel="stylesheet" href="../../style/layout/popup.css">
+</head>
+<body>
+	<div id="header-container" class="header--dark"></div>
+
+	<main class="products-page">
+		<div class="products-container">
+			<div class="breadcrumbs">
+				<a href="/index.html">Главная</a>
+				<span>/</span>
+				<a href="/pages/materialy/materials.html">Материалы</a>
+				<span>/</span>
+				<span class="breadcrumbs__current">Листовые</span>
+			</div>
+
+			<div class="materials-nav">
+				<div class="materials-nav__header">
+					<span class="materials-nav__label">КАТАЛОГ</span>
+					<h1 class="materials-nav__title">Листовые материалы</h1>
+				</div>
+				
+				<ul class="materials-nav__menu">
+					<li class="menu-item">
+						<a href="/pages/materialy/sypuchie.html" class="menu-link">Сыпучие</a>
+					</li>
+					<li class="menu-item active">
+						<a href="/pages/materialy/listovye.html" class="menu-link">Листовые</a>
+					</li>
+				</ul>
+			</div>
+
+			<div class="view-controls">
+				<div class="view-options">
+					<button class="view-btn active" data-view="grid" aria-label="Сетка">
+						<svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+							<rect x="2" y="2" width="6" height="6" stroke="currentColor" stroke-width="1.5"/>
+							<rect x="12" y="2" width="6" height="6" stroke="currentColor" stroke-width="1.5"/>
+							<rect x="2" y="12" width="6" height="6" stroke="currentColor" stroke-width="1.5"/>
+							<rect x="12" y="12" width="6" height="6" stroke="currentColor" stroke-width="1.5"/>
+						</svg>
+					</button>
+					<button class="view-btn" data-view="list" aria-label="Список">
+						<svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+							<rect x="2" y="2" width="16" height="3" stroke="currentColor" stroke-width="1.5"/>
+							<rect x="2" y="8" width="16" height="3" stroke="currentColor" stroke-width="1.5"/>
+							<rect x="2" y="14" width="16" height="3" stroke="currentColor" stroke-width="1.5"/>
+						</svg>
+					</button>
+				</div>
+				<span class="view-count">3 товара</span>
+			</div>
+
+			<div class="products-grid">
+				<div class="product-card" data-product="element-20">
+					<span class="product-card__badge">ХИТ</span>
+					<div class="product-card__image">
+						<img src="../../images/materials/list.jpg" alt="Элемент пола Knauf 20мм" loading="lazy">
+					</div>
+					<div class="product-card__content">
+						<span class="product-card__brand">KNAUF</span>
+						<h3 class="product-card__title">Элемент пола</h3>
+						<div class="product-card__specs">1200x600x20 мм · 0.72 м²</div>
+						<div class="product-card__details">Масса 18 кг · Влагостойкий</div>
+						<div class="product-card__divider"></div>
+						<span class="product-card__link">ПОДРОБНЕЕ →</span>
+					</div>
+				</div>
+
+				<div class="product-card" data-product="gvlv-10">
+					<span class="product-card__badge">ХИТ</span>
+					<div class="product-card__image">
+						<img src="../../images/materials/list2.jpg" alt="ГВЛВ 10мм" loading="lazy">
+					</div>
+					<div class="product-card__content">
+						<span class="product-card__brand">KNAUF</span>
+						<h3 class="product-card__title">Суперлист ГВЛВ</h3>
+						<div class="product-card__specs">1250x1200x10 мм · 1.5 м²</div>
+						<div class="product-card__details">Масса 17 кг · Влагостойкий</div>
+						<div class="product-card__divider"></div>
+						<span class="product-card__link">ПОДРОБНЕЕ →</span>
+					</div>
+				</div>
+
+				<div class="product-card" data-product="gvlv-12">
+					<div class="product-card__image">
+						<img src="../../images/materials/list3.jpg" alt="ГВЛВ 12мм" loading="lazy">
+					</div>
+					<div class="product-card__content">
+						<span class="product-card__brand">KNAUF</span>
+						<h3 class="product-card__title">Суперлист ГВЛВ</h3>
+						<div class="product-card__specs">1250x1200x12 мм · 1.5 м²</div>
+						<div class="product-card__details">Масса 19 кг · Влагостойкий</div>
+						<div class="product-card__divider"></div>
+						<span class="product-card__link">ПОДРОБНЕЕ →</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+
+	<div class="product-modal" id="productModal">
+		<div class="product-modal__content">
+			<button class="product-modal__close" id="closeModal">×</button>
+			<div class="product-modal__image">
+				<img id="modalImage" src="" alt="">
+			</div>
+			<div class="product-modal__info">
+				<span class="product-modal__brand" id="modalBrand"></span>
+				<h2 class="product-modal__title" id="modalTitle"></h2>
+				<div class="product-modal__description" id="modalDescription"></div>
+				<div class="product-modal__advantages" id="modalAdvantages" style="display: none;">
+					<h4>Преимущества</h4>
+					<ul id="modalAdvantagesList"></ul>
+				</div>
+				<div class="product-modal__specs" id="modalSpecs"></div>
+				<div class="product-modal__applications" id="modalApplications" style="display: none;">
+					<h4>Применение</h4>
+					<p id="modalApplicationsText"></p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="footer-container"></div>
+	
+	<div class="popup-overlay" id="popupOverlay" aria-hidden="true" role="dialog" aria-labelledby="popupTitle">
+		<div class="popup" id="popup">
+			<button class="close-btn" id="closeBtn" aria-label="Закрыть окно">&times;</button>
+			<h2 id="popupTitle">ОСТАВЬТЕ ЗАЯВКУ</h2>
+			<p class="popup__subtitle">Мы свяжемся с вами в ближайшее время</p>
+			<form class="popup-form" id="consultForm">
+				<input type="text" placeholder="ВАШЕ ИМЯ" required aria-label="Ваше имя">
+				<input type="tel" inputmode="tel" pattern="[0-9]*" placeholder="+7 (000) 000-00-00" required aria-label="Номер телефона" id="phoneInput" maxlength="18">
+				<button type="submit" class="popup__submit-btn">ОСТАВИТЬ ЗАЯВКУ</button>
+				<label class="popup__checkbox">
+					<input type="checkbox" checked required>
+					<span>Я согласен с политикой конфиденциальности</span>
+				</label>
+			</form>
+		</div>
+	</div>
+
+	<script src="../../js/loadTemplates.js"></script>
+	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+	<script src="../../js/popup.js"></script>
+	<script src="../../js/phone-ripple.js"></script>
+	<script src="../../js/product-modal.js"></script>
+	<script src="../../js/aos-init.js"></script>
+	<script src="../../js/products-view.js"></script>
+</body>
+</html>

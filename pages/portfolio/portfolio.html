@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Наши работы | СКОРОпол</title>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+	<link rel="stylesheet" href="../../style/style.css">
+	<link rel="stylesheet" href="../../style/fonts/fonts.css">
+	<link rel="stylesheet" href="../../style/layout/header.css">
+	<link rel="stylesheet" href="../../style/layout/mobile-nav.css">
+	<link rel="stylesheet" href="../../style/layout/footer.css">
+	<link rel="stylesheet" href="../../style/layout/popup.css">
+	<link rel="stylesheet" href="../../style/pages/portfolio/portfolio.css">
+</head>
+<body>
+	<div id="header-container" class="header--dark"></div>
+
+	<main class="portfolio-page">
+		<div class="portfolio-container">
+			
+			<div class="portfolio-hero" data-aos="fade-up">
+				<h1 class="portfolio-hero__title">
+					Наши работы
+					<span class="portfolio-hero__title-accent">галерея объектов</span>
+				</h1>
+				<p class="portfolio-hero__text">
+					Более 5000 выполненных объектов в Самаре и области.
+					Реальные фото наших работ — от небольших комнат до коттеджей.
+				</p>
+				<a href="#consultation" class="portfolio-hero__btn consult-btn">
+					Заказать такой же пол
+				</a>
+			</div>
+
+			<div class="portfolio-stats" data-aos="fade-up" data-aos-delay="100">
+				<div class="stats-grid">
+					<div class="stat-item">
+						<div class="stat-item__number">5000+</div>
+						<p class="stat-item__label">объектов</p>
+					</div>
+					<div class="stat-item">
+						<div class="stat-item__number">20+</div>
+						<p class="stat-item__label">лет опыта</p>
+					</div>
+					<div class="stat-item">
+						<div class="stat-item__number">100%</div>
+						<p class="stat-item__label">гарантия качества</p>
+					</div>
+				</div>
+			</div>
+
+			<nav class="portfolio-nav" data-aos="fade-up" data-aos-delay="150">
+				<a href="#standard" class="portfolio-nav__link is-active" data-category="standard">Стандартный</a>
+				<a href="#econom" class="portfolio-nav__link" data-category="econom">Бюджетный</a>
+				<a href="#finish" class="portfolio-nav__link" data-category="finish">С покрытием</a>
+				<a href="#hard" class="portfolio-nav__link" data-category="hard">Сложные</a>
+			</nav>
+
+			<h2 class="portfolio-section-title" data-aos="fade-up">
+				Фото с объектов
+				<span class="portfolio-section-title__accent">с описанием процесса</span>
+			</h2>
+
+			<div class="portfolio-categories" id="portfolio-categories">
+				<section id="standard" class="portfolio-category is-active">
+					<h3 class="portfolio-category__title">Стандартный монтаж сухой стяжки</h3>
+					<div class="portfolio-grid" id="standard-grid"></div>
+				</section>
+				
+				<section id="econom" class="portfolio-category">
+					<h3 class="portfolio-category__title">Бюджетный монтаж сухой стяжки</h3>
+					<div class="portfolio-grid" id="econom-grid"></div>
+				</section>
+				
+				<section id="finish" class="portfolio-category">
+					<h3 class="portfolio-category__title">Монтаж сухой стяжки с чистовым покрытием</h3>
+					<div class="portfolio-grid" id="finish-grid"></div>
+				</section>
+				
+				<section id="hard" class="portfolio-category">
+					<h3 class="portfolio-category__title">Монтаж сухой стяжки повышенной сложности</h3>
+					<div class="portfolio-grid" id="hard-grid"></div>
+				</section>
+			</div>
+
+			<section class="portfolio-cta" data-aos="fade-up">
+				<p class="portfolio-cta__text">
+					Понравились наши работы?
+					<br>Закажите бесплатный замер и расчёт стоимости!
+				</p>
+				<div class="portfolio-cta__buttons">
+					<a href="tel:+79272070505" class="btn btn--primary">+7 (927) 207-05-05</a>
+					<a href="https://t.me/+79272070505?text=Здравствуйте!%20Хочу%20заказать%20замер" class="btn btn--outline" target="_blank" rel="noopener">Написать в Telegram</a>
+				</div>
+			</section>
+
+		</div>
+	</main>
+
+	<div id="footer-container"></div>
+
+	<div class="popup-overlay" id="popupOverlay" aria-hidden="true" role="dialog" aria-labelledby="popupTitle">
+		<div class="popup" id="popup">
+			<button class="close-btn" id="closeBtn" aria-label="Закрыть окно">&times;</button>
+			<h2 id="popupTitle">ОСТАВЬТЕ ЗАЯВКУ</h2>
+			<p class="popup__subtitle">Мы свяжемся с вами в ближайшее время</p>
+			<form class="popup-form" id="consultForm">
+				<input type="text" placeholder="ВАШЕ ИМЯ" required aria-label="Ваше имя">
+				<input type="tel" inputmode="tel" pattern="[0-9]*" placeholder="+7 (000) 000-00-00" required aria-label="Номер телефона" id="phoneInput" maxlength="18">
+				<button type="submit" class="popup__submit-btn">ОСТАВИТЬ ЗАЯВКУ</button>
+				<label class="popup__checkbox">
+					<input type="checkbox" required>
+					<span>Я согласен с политикой конфиденциальности</span>
+				</label>
+			</form>
+		</div>
+	</div>
+
+	<div class="photo-modal" id="photoModal" hidden>
+		<div class="photo-modal__overlay"></div>
+		<div class="photo-modal__content">
+			<button class="photo-modal__close" aria-label="Закрыть">&times;</button>
+			<img class="photo-modal__image" src="" alt="">
+			<div class="photo-modal__caption"></div>
+			<button class="photo-modal__nav photo-modal__nav--prev" aria-label="Предыдущее фото">‹</button>
+			<button class="photo-modal__nav photo-modal__nav--next" aria-label="Следующее фото">›</button>
+		</div>
+	</div>
+
+	<script src="../../js/loadTemplates.js"></script>
+	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+	<script src="../../js/popup.js"></script>
+	<script src="../../js/phone-ripple.js"></script>
+	<script src="../../js/aos-init.js"></script>
+
+	<script src="../../js/pages/portfolio/projects.js"></script>
+	<script src="../../js/pages/portfolio/portfolio-builders.js"></script>
+	<script src="../../js/pages/portfolio/categories.js"></script>
+	<script src="../../js/pages/portfolio/photo-modal.js"></script>
+	<script src="../../js/pages/portfolio/carousel.js"></script>
+</body>
+</html>

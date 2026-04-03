@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Галерея работ | СКОРОпол</title>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+	<link rel="stylesheet" href="../../style/style.css">
+	<link rel="stylesheet" href="../../style/fonts/fonts.css">
+	<link rel="stylesheet" href="../../style/layout/header.css">
+	<link rel="stylesheet" href="../../style/layout/mobile-nav.css">
+	<link rel="stylesheet" href="../../style/pages/gallery/gallery.css">
+	<link rel="stylesheet" href="../../style/layout/footer.css">
+	<link rel="stylesheet" href="../../style/layout/popup.css">
+</head>
+<body>
+	<div id="header-container" class="header--dark"></div>
+	
+	<section class="gallery-section">
+		<div class="container">
+			<div class="gallery__header" data-aos="fade-up">
+				<h2 class="gallery__title">ГАЛЕРЕЯ</h2>
+				<p class="gallery__subtitle">Наши работы</p>
+			</div>
+
+			<div class="gallery__filter" data-aos="fade-up" data-aos-delay="100">
+				<button class="filter-btn active" data-filter="object">ОБЪЕКТЫ</button>
+				<button class="filter-btn" data-filter="montazh">МОНТАЖ</button>
+				<button class="filter-btn" data-filter="demontazh">ДЕМОНТАЖ</button>
+				<button class="filter-btn" data-filter="ukladka">УКЛАДКА</button>
+			</div>
+
+			<div class="gallery__grid" id="galleryGrid">
+				<div class="gallery-item" data-category="object">
+					<img src="../../images/gallery/object.webp" alt="Объект" loading="lazy">
+				</div>
+				<div class="gallery-item" data-category="object">
+					<img src="../../images/gallery/object1.webp" alt="Объект" loading="lazy">
+				</div>
+				<div class="gallery-item" data-category="object">
+					<img src="../../images/gallery/object2.webp" alt="Объект" loading="lazy">
+				</div>
+				<div class="gallery-item" data-category="object">
+					<img src="../../images/gallery/object3.webp" alt="Объект" loading="lazy">
+				</div>
+				<div class="gallery-item" data-category="object">
+					<img src="../../images/gallery/object4.webp" alt="Объект" loading="lazy">
+				</div>
+
+				<div class="gallery-item" data-category="montazh">
+					<img src="../../images/gallery/montazh.webp" alt="Монтаж" loading="lazy">
+				</div>
+				<div class="gallery-item" data-category="montazh">
+					<img src="../../images/gallery/montazh1.webp" alt="Монтаж" loading="lazy">
+				</div>
+				<div class="gallery-item" data-category="montazh">
+					<img src="../../images/gallery/montazh2.webp" alt="Монтаж" loading="lazy">
+				</div>
+				<div class="gallery-item" data-category="montazh">
+					<img src="../../images/gallery/montazh3.webp" alt="Монтаж" loading="lazy">
+				</div>
+				<div class="gallery-item" data-category="montazh">
+					<img src="../../images/gallery/montazh4.webp" alt="Монтаж" loading="lazy">
+				</div>
+				<div class="gallery-item" data-category="montazh">
+					<img src="../../images/gallery/montazh5.webp" alt="Монтаж" loading="lazy">
+				</div>
+
+				<div class="gallery-item" data-category="demontazh">
+					<img src="../../images/gallery/demontazh.webp" alt="Демонтаж" loading="lazy">
+				</div>
+				<div class="gallery-item" data-category="demontazh">
+					<img src="../../images/gallery/demontazh1.webp" alt="Демонтаж" loading="lazy">
+				</div>
+				<div class="gallery-item" data-category="demontazh">
+					<img src="../../images/gallery/demontazh2.webp" alt="Демонтаж" loading="lazy">
+				</div>
+				<div class="gallery-item" data-category="demontazh">
+					<img src="../../images/gallery/demontazh3.webp" alt="Демонтаж" loading="lazy">
+				</div>
+				<div class="gallery-item" data-category="demontazh">
+					<img src="../../images/gallery/demontazh4.webp" alt="Демонтаж" loading="lazy">
+				</div>
+				<div class="gallery-item" data-category="demontazh">
+					<img src="../../images/gallery/demontazh5.webp" alt="Демонтаж" loading="lazy">
+				</div>
+
+				<div class="gallery-item" data-category="ukladka">
+					<img src="../../images/gallery/ukladka.webp" alt="Укладка" loading="lazy">
+				</div>
+				<div class="gallery-item" data-category="ukladka">
+					<img src="../../images/gallery/ukladka1.webp" alt="Укладка" loading="lazy">
+				</div>
+				<div class="gallery-item" data-category="ukladka">
+					<img src="../../images/gallery/ukladka2.webp" alt="Укладка" loading="lazy">
+				</div>
+				<div class="gallery-item" data-category="ukladka">
+					<img src="../../images/gallery/ukladka3.webp" alt="Укладка" loading="lazy">
+				</div>
+				<div class="gallery-item" data-category="ukladka">
+					<img src="../../images/gallery/ukladka4.webp" alt="Укладка" loading="lazy">
+				</div>
+				<div class="gallery-item" data-category="ukladka">
+					<img src="../../images/gallery/ukladka5.webp" alt="Укладка" loading="lazy">
+				</div>
+			</div>
+		</div>
+
+		<div class="gallery-modal" id="galleryModal">
+			<span class="gallery-modal__close">&times;</span>
+			<img class="gallery-modal__image" id="modalImage">
+			<button class="gallery-modal__prev">&#10094;</button>
+			<button class="gallery-modal__next">&#10095;</button>
+		</div>
+	</section>
+
+	<div id="footer-container"></div>
+	
+	<div class="popup-overlay" id="popupOverlay" aria-hidden="true" role="dialog" aria-labelledby="popupTitle">
+		<div class="popup" id="popup">
+			<button class="close-btn" id="closeBtn" aria-label="Закрыть окно">&times;</button>
+			<h2 id="popupTitle">ОСТАВЬТЕ ЗАЯВКУ</h2>
+			<p class="popup__subtitle">Мы свяжемся с вами в ближайшее время</p>
+			<form class="popup-form" id="consultForm">
+				<input type="text" placeholder="ВАШЕ ИМЯ" required aria-label="Ваше имя">
+				<input type="tel" inputmode="tel" pattern="[0-9]*" placeholder="+7 (000) 000-00-00" required aria-label="Номер телефона" id="phoneInput" maxlength="18">
+				<button type="submit" class="popup__submit-btn">ОСТАВИТЬ ЗАЯВКУ</button>
+				<label class="popup__checkbox">
+					<input type="checkbox" checked required>
+					<span>Я согласен с политикой конфиденциальности</span>
+				</label>
+			</form>
+		</div>
+	</div>
+
+	<script src="../../js/loadTemplates.js"></script>
+	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+	<script src="../../js/popup.js"></script>
+	<script src="../../js/pages/gallery.js"></script>
+	<script src="../../js/phone-ripple.js"></script>
+	<script src="../../js/aos-init.js"></script>
+</body>
+</html>

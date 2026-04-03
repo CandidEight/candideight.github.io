@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Купон на скидку | СКОРОпол</title>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+		
+		body {
+			font-family: 'Inter', sans-serif;
+			background: #f0f0f0;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			min-height: 100vh;
+			padding: 20px;
+		}
+		
+		.coupon-page {
+			max-width: 500px;
+			width: 100%;
+		}
+		
+		.promo-coupon-frame {
+			background: #FFFFFF;
+			border: 1px solid #e0e0e0;
+			padding: 25px;
+			box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.2);
+			margin-bottom: 30px;
+		}
+		
+		.promo-coupon__image {
+			width: 100%;
+			height: auto;
+			display: block;
+		}
+		
+		.coupon-info {
+			text-align: center;
+			font-family: 'Inter', sans-serif;
+		}
+		
+		.coupon-info h3 {
+			font-family: 'Montserrat', sans-serif;
+			font-size: 24px;
+			font-weight: 500;
+			color: #0D3D34;
+			margin-bottom: 10px;
+		}
+		
+		.coupon-info p {
+			color: #666;
+			font-size: 14px;
+			margin-bottom: 20px;
+		}
+		
+		.coupon-print-btn {
+			background: #0D3D34;
+			color: white;
+			border: none;
+			padding: 15px 30px;
+			font-family: 'Inter', sans-serif;
+			font-size: 16px;
+			font-weight: 500;
+			cursor: pointer;
+			width: 100%;
+			transition: background 0.3s;
+			text-transform: uppercase;
+			letter-spacing: 1px;
+		}
+		
+		.coupon-print-btn:hover {
+			background: #1A4A40;
+		}
+		
+		@media print {
+			body {
+				background: white;
+				padding: 0;
+				margin: 0;
+			}
+			
+			.coupon-print-btn,
+			.coupon-info {
+				display: none !important;
+			}
+			
+			.promo-coupon-frame {
+				box-shadow: none;
+				border: none;
+				padding: 0;
+				margin: 0;
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+			
+			.promo-coupon__image {
+				max-width: 100%;
+				max-height: 100%;
+				object-fit: contain;
+			}
+		}
+	</style>
+</head>
+<body>
+	<div class="coupon-page">
+		<div class="promo-coupon-frame">
+			<img src="../../images/coupon.jpg" alt="Купон на скидку" class="promo-coupon__image">
+		</div>
+		
+		<div class="coupon-info">
+			<h3>−1000₽ за каждый 10 м²</h3>
+			<p>При заказе от 20 м² • Не суммируется с другими акциями</p>
+		</div>
+		
+		<button class="coupon-print-btn" onclick="window.print()">
+			Распечатать купон
+		</button>
+	</div>
+</body>
+</html>

@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>СКОРОпол</title>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+	<link rel="stylesheet" href="style/style.css">
+	<link rel="stylesheet" href="style/fonts/fonts.css">
+	<link rel="stylesheet" href="style/layout/header.css">
+	<link rel="stylesheet" href="style/layout/mobile-nav.css">
+	<link rel="stylesheet" href="style/layout/hero.css">
+	<link rel="stylesheet" href="style/layout/popup.css">
+	<link rel="stylesheet" href="style/layout/advantages.css">
+	<link rel="stylesheet" href="style/layout/accordeon.css">
+	<link rel="stylesheet" href="style/layout/guarantee.css">
+	<link rel="stylesheet" href="style/layout/prices.css">
+	<link rel="stylesheet" href="style/layout/comparison.css">
+	<link rel="stylesheet" href="style/layout/work.css">
+	<link rel="stylesheet" href="style/layout/promo.css">
+	<link rel="stylesheet" href="style/layout/reviews.css">
+	<link rel="stylesheet" href="style/layout/footer.css">
+</head>
+<body>
+	<div id="header-container"></div>
+	<section class="hero">
+		<div class="hero__overlay">
+			<h1 class="hero__title" data-aos="fade-up" data-aos-duration="1000">Услуги по монтажу сухой сборной стяжки <span class="knauf-text">Knauf</span></h1>
+			<p class="hero__text" data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000">Сухая стяжка — это пол, который никогда не заскрипит.</p>
+			<div class="hero__buttons" data-aos="fade-up" data-aos-delay="600" data-aos-duration="1000">
+				<a href="pages/calculation/calculation.html" class="hero__btn hero__btn--primary">Рассчитать стоимость</a>
+				<a href="#consultation" class="hero__btn hero__btn--secondary consult-btn" id="consultation-btn">Консультация</a>
+			</div>
+		</div>
+	</section>
+	<section class="advantages">
+		<!--Все иконки взяты с сайта https://svg4.ru/-->
+		<div class="container">
+			<h2 class="advantages__title" data-aos="fade-up">НАШИ ПРЕИМУЩЕСТВА</h2>
+			<div class="advantages__grid">
+				<div class="advantage-card" data-aos="fade-up" data-aos-delay="100">
+					<div class="advantage-card__inner">
+						<div class="advantage-card__icon">
+							<img src="images/icons/free.svg" alt="Бесплатно" loading="lazy" decoding="async" width="50" height="50">
+						</div>
+						<h3 class="advantage-card__title">Бесплатно</h3>
+						<p class="advantage-card__text">Расчёт сметы, выезд замерщика и консультация.</p>
+					</div>
+				</div>
+				<div class="advantage-card" data-aos="fade-up" data-aos-delay="200">
+					<div class="advantage-card__inner">
+						<div class="advantage-card__icon">
+							<img src="images/icons/job.svg" alt="Профмонтаж" loading="lazy" decoding="async" width="50" height="50">
+						</div>
+						<h3 class="advantage-card__title">Профмонтаж</h3>
+						<p class="advantage-card__text">Работают только сертифицированные специалисты.</p>
+					</div>
+				</div>
+				<div class="advantage-card" data-aos="fade-up" data-aos-delay="300">
+					<div class="advantage-card__inner">
+						<div class="advantage-card__icon">
+							<img src="images/icons/sale.svg" alt="Скидка" loading="lazy" decoding="async" width="50" height="50">
+						</div>
+						<h3 class="advantage-card__title">Скидка</h3>
+						<p class="advantage-card__text">Специальные условия при заказе двух и более услуг.</p>
+					</div>
+				</div>
+				<div class="advantage-card" data-aos="fade-up" data-aos-delay="400">
+					<div class="advantage-card__inner">
+						<div class="advantage-card__icon">
+							<img src="images/icons/guarantee.svg" alt="Гарантия" loading="lazy" decoding="async" width="50" height="50">
+						</div>
+						<h3 class="advantage-card__title">Гарантия</h3>
+						<p class="advantage-card__text">Даём гарантию 3 года на все виды работ по договору.</p>
+					</div>
+				</div>
+				<div class="advantage-card" data-aos="fade-up" data-aos-delay="500">
+					<div class="advantage-card__inner">
+						<div class="advantage-card__icon">
+							<img src="images/icons/uslugi.svg" alt="Спектр услуг" loading="lazy" decoding="async" width="50" height="50">
+						</div>
+						<h3 class="advantage-card__title">Спектр услуг</h3>
+						<p class="advantage-card__text">Полный цикл: от демонтажа до финишного покрытия.</p>
+					</div>
+				</div>
+				<div class="advantage-card" data-aos="fade-up" data-aos-delay="600">
+					<div class="advantage-card__inner">
+						<div class="advantage-card__icon">
+							<img src="images/icons/ecology.svg" alt="Экологично" loading="lazy" decoding="async" width="50" height="50">
+						</div>
+						<h3 class="advantage-card__title">Экологично</h3>
+						<p class="advantage-card__text">Используем безопасные материалы без запаха и пыли.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="process-accordion" id="faq">
+		<div class="process-accordion__container">
+			<div class="process-accordion__layout">
+				<div class="process-accordion__sidebar" data-aos="fade-right">
+					<div class="process-accordion__sidebar-content">
+						<h2 class="process-accordion__title">FAQ</h2>
+						<p class="process-accordion__description">
+							Как мы работаем от первого звонка до сдачи объекта. 
+							Прозрачные этапы и четкие сроки.
+						</p>
+					</div>
+
+					<div class="process-accordion__items">
+						<div class="process-accordion__item">
+							<button class="process-accordion__header" aria-expanded="false" aria-controls="step1">
+								<div class="process-accordion__header-inner">
+									<div class="process-accordion__icon">
+										<svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+											<path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2"/>
+										</svg>
+									</div>
+									<h3 class="process-accordion__item-title">ПРОИЗВОДИМ ЗАМЕР ПОМЕЩЕНИЯ</h3>
+								</div>
+							</button>
+							<div class="process-accordion__content" id="step1" hidden>
+								<div class="process-accordion__content-inner">
+									<p>Наш специалист приезжает к вам в оговоренное время. Производит все необходимые замеры и расчеты. При необходимости проводит консультацию. Замер по городу абсолютно бесплатный.</p>
+								</div>
+							</div>
+						</div>
+
+						<div class="process-accordion__item">
+							<button class="process-accordion__header" aria-expanded="false" aria-controls="step2">
+								<div class="process-accordion__header-inner">
+									<div class="process-accordion__icon">
+										<svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+											<path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2"/>
+										</svg>
+									</div>
+									<h3 class="process-accordion__item-title">ВЫЕЗД НА ОБЪЕКТ</h3>
+								</div>
+							</button>
+							<div class="process-accordion__content" id="step2" hidden>
+								<div class="process-accordion__content-inner">
+									<p>Приезжаем со всем необходимым материалом и инструментом. Разгружаем. Заносим на объект. Заделываем все отверстия в плитах перекрытия до состояния аквариума.</p>
+								</div>
+							</div>
+						</div>
+
+						<div class="process-accordion__item">
+							<button class="process-accordion__header" aria-expanded="false" aria-controls="step3">
+								<div class="process-accordion__header-inner">
+									<div class="process-accordion__icon">
+										<svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+											<path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2"/>
+										</svg>
+									</div>
+									<h3 class="process-accordion__item-title">МОНТАЖ KNAUF</h3>
+								</div>
+							</button>
+							<div class="process-accordion__content" id="step3" hidden>
+								<div class="process-accordion__content-inner">
+									<p>Производим монтаж листов Кнауф суперпол (ГВЛВ). Листы склеиваем между собой и стягиваем специальными саморезами. Затираем периметр и стыки.</p>
+								</div>
+							</div>
+						</div>
+
+						<div class="process-accordion__item">
+							<button class="process-accordion__header" aria-expanded="false" aria-controls="step4">
+								<div class="process-accordion__header-inner">
+									<div class="process-accordion__icon">
+										<svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+											<path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2"/>
+										</svg>
+									</div>
+									<h3 class="process-accordion__item-title">СДАЧА ОБЪЕКТА</h3>
+								</div>
+							</button>
+							<div class="process-accordion__content" id="step4" hidden>
+								<div class="process-accordion__content-inner">
+									<p>Убираем и выносим весь мусор. Если остался лишний материал, мы его вычитаем из общей сметы и увозим обратно. Вот и все. Ваш идеальный пол Кнауф готов.</p>
+								</div>
+							</div>
+						</div>
+
+						<div class="process-accordion__item">
+							<button class="process-accordion__header" aria-expanded="false" aria-controls="step5">
+								<div class="process-accordion__header-inner">
+									<div class="process-accordion__icon">
+										<svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+											<path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2"/>
+										</svg>
+									</div>
+									<h3 class="process-accordion__item-title">ВСЕГДА НА СВЯЗИ С ЗАКАЗЧИКАМИ</h3>
+								</div>
+							</button>
+							<div class="process-accordion__content" id="step5" hidden>
+								<div class="process-accordion__content-inner">
+									<p>Бесплатно консультируем по любым вопросам. Если нужно приезжаем на объект.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<button class="process-accordion__ask-btn consult-btn" id="askQuestionBtn">
+						<span>Оставить заявку</span>
+						<svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+							<path d="M12 4v16m8-8H4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+						</svg>
+					</button>
+				</div>
+
+				<div class="process-accordion__slider" data-aos="fade-up">
+					<div class="slider-container">
+						<div class="slider-track">
+							<div class="slider-slide active">
+								<div class="slider-image">
+									<img src="https://static.tildacdn.com/tild3433-6666-4662-a661-663861316637/-_22_1.jpg" alt="Пример работ 1">
+								</div>
+							</div>
+							<div class="slider-slide">
+								<div class="slider-image">
+									<img src="images/before.jpg" alt="Пример работ 2">
+								</div>
+							</div>
+							<div class="slider-slide">
+								<div class="slider-image">
+									<img src="images/after.jpg" alt="Пример работ 3">
+								</div>
+							</div>
+						</div>
+						<div class="slider-controls">
+							<button class="slider-prev" aria-label="Предыдущий слайд">
+								<svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+									<path d="M15 6L9 12L15 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+								</svg>
+							</button>
+							<div class="slider-dots">
+								<button class="slider-dot active" aria-label="Слайд 1"></button>
+								<button class="slider-dot" aria-label="Слайд 2"></button>
+								<button class="slider-dot" aria-label="Слайд 3"></button>
+							</div>
+							<button class="slider-next" aria-label="Следующий слайд">
+								<svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+									<path d="M9 6L15 12L9 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+								</svg>
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="guarantee-section">
+		<div class="container">
+			<div class="guarantee-section__header" data-aos="fade-up">
+				<h2 class="guarantee-section__title">МЫ ДЕЛАЕМ КАЧЕСТВЕННО И ПРОЗРАЧНО</h2>
+				<p class="guarantee-section__subtitle">Результаты нашей работы и условия сотрудничества</p>
+			</div>
+			<div class="guarantee-section__content">
+				<div class="guarantee-section__demo" data-aos="fade-up" data-aos-delay="200">
+					<div class="guarantee-section__photos">
+						<div class="guarantee-section__photo guarantee-section__photo--before">
+							<div class="guarantee-section__photo-label">
+								<span>ДО</span>
+							</div>
+							<div class="guarantee-section__photo-image">
+								<img src="images/before.jpg" alt="Старый пол / неровное основание" loading="lazy" decoding="async" width="600" height="400">
+							</div>
+						</div>
+						<div class="guarantee-section__photo guarantee-section__photo--after">
+							<div class="guarantee-section__photo-label">
+								<span>ПОСЛЕ</span>
+							</div>
+							<div class="guarantee-section__photo-image">
+								<img src="images/after.jpg" alt="Старый пол / неровное основание" loading="lazy" decoding="async" width="600" height="400">
+							</div>
+						</div>
+					</div>
+					<div class="guarantee-section__caption">
+						<p>Пример монтажа сухой сборной стяжки Knauf</p>
+					</div>
+				</div>
+				<div class="guarantee-section__terms" data-aos="fade-up" data-aos-delay="300">
+					<article class="guarantee-term">
+						<div class="guarantee-term__icon">
+							<img src="images/icons-guarantee/dostavka.png" alt="Иконка" width="100" height="100">
+						</div>
+						<div class="guarantee-term__content">
+							<h3 class="guarantee-term__title">Доставка и выкуп материалов</h3>
+							<p class="guarantee-term__text">На объект завозим все материалы с запасом 5%.</p>
+						</div>
+					</article>
+					<article class="guarantee-term">
+						<div class="guarantee-term__icon">
+							<img src="images/icons-guarantee/instrumenty.png" alt="Иконка" width="100" height="100">
+						</div>
+						<div class="guarantee-term__content">
+							<h3 class="guarantee-term__title">В наличии материалы для всех этапов</h3>
+							<p class="guarantee-term__text">Черновые и финишные смеси, листы Knauf, крепеж, утеплитель.</p>
+						</div>
+					</article>
+					<article class="guarantee-term">
+						<div class="guarantee-term__icon">
+							<img src="images/icons-guarantee/materialy.png" alt="Иконка" width="100" height="100">
+						</div>
+						<div class="guarantee-term__content">
+							<h3 class="guarantee-term__title">Привозим на объект за 1 день</h3>
+							<p class="guarantee-term__text">Своя служба оперативно доставит материалы в квартиру.</p>
+						</div>
+					</article>
+					<article class="guarantee-term">
+						<div class="guarantee-term__icon">
+							<img src="images/icons-guarantee/money.png" alt="Иконка" width="100" height="100">
+						</div>
+						<div class="guarantee-term__content">
+							<h3 class="guarantee-term__title">Оптовые цены и материалы</h3>
+							<p class="guarantee-term__text">Мы партнеры Knauf, REHAU, Тikkurila.</p>
+						</div>
+					</article>
+				</div>
+			</div>
+			<div class="guarantee-section__portfolio" data-aos="fade-up" data-aos-delay="400">
+				<div class="portfolio-invite">
+					<div class="portfolio-invite__geometric"></div>
+					<h3 class="portfolio-invite__title">Вдохновляйтесь нашими работами</h3>
+					<p class="portfolio-invite__text">
+						От уютных квартир до просторных коттеджей. Каждый проект — это история идеального пола.
+					</p>
+					<div class="portfolio-invite__btn-wrapper">
+						<a href="pages/portfolio/portfolio.html" class="portfolio-invite__btn">
+							<span>Смотреть портфолио</span>
+							<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+								<path d="M5 12h14M12 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round"/>
+							</svg>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="premium-prices">
+		<div class="container">
+			<div class="premium-prices__header" data-aos="fade-up">
+				<span class="premium-prices__label">ТАРИФЫ</span>
+				<h2 class="premium-prices__title">Выберите свой идеальный пол</h2>
+				<p class="premium-prices__subtitle">Прозрачные цены без скрытых платежей</p>
+			</div>
+
+			<div class="premium-prices__slider" data-aos="fade-up" data-aos-delay="100">
+				<label class="premium-prices__thickness">
+					<span class="thickness-label">Толщина стяжки</span>
+					<div class="thickness-control">
+						<input type="range" id="premium-thickness" class="thickness-range" min="6" max="14" step="1" value="6">
+						<div class="thickness-values">
+							<span>6 см</span>
+							<span id="max-thickness-display">14 см</span>
+						</div>
+					</div>
+					<span class="thickness-surcharge">+100₽ за каждый дополнительный см</span>
+				</label>
+			</div>
+
+			<div class="premium-prices__grid" data-aos="fade-up" data-aos-delay="200">
+				<div class="price-card price-card--featured">
+					<div class="price-card__ribbon">Популярный</div>
+					<div class="price-card__header">
+						<h3 class="price-card__title">Стандарт</h3>
+						<div class="price-card__icon">
+							<img src="images/prices-icons/standart.png" alt="Стандарт" width="32" height="32" loading="lazy">
+						</div>
+					</div>
+					<div class="price-card__price">
+						<span class="price-card__value" id="price-standard">2 400</span>
+						<span class="price-card__currency">₽/м²</span>
+					</div>
+					<ul class="price-card__features">
+						<li class="price-card__feature"><img src="images/icons/check.svg" alt="" class="feature-icon"> Засыпка</li>
+						<li class="price-card__feature"><img src="images/icons/check.svg" alt="" class="feature-icon"> ГВЛ-плиты</li>
+						<li class="price-card__feature"><img src="images/icons/check.svg" alt="" class="feature-icon"> Кромочная лента</li>
+						<li class="price-card__feature"><img src="images/icons/check.svg" alt="" class="feature-icon"> Клей, саморезы</li>
+						<li class="price-card__feature"><img src="images/icons/check.svg" alt="" class="feature-icon"> Работа</li>
+						<li class="price-card__feature"><img src="images/icons/star.svg" alt="" class="feature-icon"> Пенополистирол</li>
+					</ul>
+					<a href="#consultation" class="price-card__btn consult-btn">Выбрать</a>
+				</div>
+
+				<div class="price-card">
+					<div class="price-card__header">
+						<h3 class="price-card__title">Премиум</h3>
+						<div class="price-card__icon">
+							<img src="images/prices-icons/premium.png" alt="Премиум" width="32" height="32" loading="lazy">
+						</div>
+					</div>
+					<div class="price-card__price">
+						<span class="price-card__value" id="price-premium">3 200</span>
+						<span class="price-card__currency">₽/м²</span>
+					</div>
+					<ul class="price-card__features">
+						<li class="price-card__feature"><img src="images/icons/check.svg" alt="" class="feature-icon"> Всё из Стандарта</li>
+						<li class="price-card__feature"><img src="images/icons/check.svg" alt="" class="feature-icon"> Пенополистирол</li>
+						<li class="price-card__feature"><img src="images/icons/check.svg" alt="" class="feature-icon"> ГВЛВ 10 мм</li>
+					</ul>
+					<a href="#consultation" class="price-card__btn consult-btn">Выбрать</a>
+				</div>
+
+				<div class="price-card">
+					<div class="price-card__header">
+						<h3 class="price-card__title">Супер Эконом</h3>
+						<div class="price-card__icon">
+							<img src="images/prices-icons/economy.png" alt="Эконом" width="32" height="32" loading="lazy">
+						</div>
+					</div>
+					<div class="price-card__price">
+						<span class="price-card__value" id="price-econom">2 100</span>
+						<span class="price-card__currency">₽/м²</span>
+					</div>
+					<ul class="price-card__features">
+						<li class="price-card__feature"><img src="images/icons/check.svg" alt="" class="feature-icon"> Засыпка</li>
+						<li class="price-card__feature"><img src="images/icons/check.svg" alt="" class="feature-icon"> ГВЛ-плиты</li>
+						<li class="price-card__feature"><img src="images/icons/check.svg" alt="" class="feature-icon"> Кромочная лента</li>
+						<li class="price-card__feature"><img src="images/icons/check.svg" alt="" class="feature-icon"> Клей, саморезы</li>
+						<li class="price-card__feature"><img src="images/icons/check.svg" alt="" class="feature-icon"> Работа</li>
+					</ul>
+					<a href="#consultation" class="price-card__btn consult-btn">Выбрать</a>
+				</div>
+
+				<div class="price-card">
+					<div class="price-card__header">
+						<h3 class="price-card__title">Только работа</h3>
+						<div class="price-card__icon">
+							<img src="images/prices-icons/rabota.png" alt="Только работа" width="32" height="32" loading="lazy">
+						</div>
+					</div>
+					<div class="price-card__price">
+						<span class="price-card__value" id="price-work">700</span>
+						<span class="price-card__currency">₽/м²</span>
+					</div>
+					<ul class="price-card__features">
+						<li class="price-card__feature"><img src="images/icons/check.svg" alt="" class="feature-icon"> Профессиональный монтаж</li>
+						<li class="price-card__feature"><img src="images/icons/check.svg" alt="" class="feature-icon"> Ваши материалы</li>
+						<li class="price-card__feature"><img src="images/icons/check.svg" alt="" class="feature-icon"> Гарантия 3 года</li>
+					</ul>
+					<a href="#consultation" class="price-card__btn consult-btn">Выбрать</a>
+				</div>
+			</div>
+
+			<div class="premium-prices__note" data-aos="fade-up" data-aos-delay="300">
+				<p>Цены указаны при толщине стяжки <span id="current-thickness">6</span> см. Каждый дополнительный сантиметр +100₽/м²</p>
+			</div>
+		</div>
+	</section>
+	<section class="comparison-section" id="comparison">
+		<div class="corner corner-top-left">
+			<div class="horizontal"></div>
+			<div class="vertical"></div>
+		</div>
+		<div class="corner corner-bottom-right">
+			<div class="vertical"></div>
+			<div class="horizontal"></div>
+		</div>
+
+		<div class="container">
+			<div class="comparison__header">
+				<span class="comparison__superhead">Тест-драйв технологий</span>
+				<h2 class="comparison__title">Сухая <span class="comparison__title-accent">vs</span> Мокрая</h2>
+				<p class="comparison__subtitle">Выбор в пользу технологий и комфорта</p>
+			</div>
+
+			<div class="comparison-grid">
+				<div class="comparison-card card-dry">
+					<div class="card__ribbon">Современная технология</div>
+					<div class="card__header">
+						<div class="card__icon">
+							<img src="images/feature-icons/stone.png" alt="Иконка" width="100" height="100">
+						</div>
+						<h3 class="card__title">Сухая стяжка <span>Knauf</span></h3>
+					</div>
+					
+					<div class="card__stats">
+						<div class="stat">
+							<span class="stat__value">1-2 дня</span>
+							<span class="stat__label">Скорость монтажа</span>
+						</div>
+						<div class="stat">
+							<span class="stat__value">25 кг/м²</span>
+							<span class="stat__label">Нагрузка</span>
+						</div>
+						<div class="stat">
+							<span class="stat__value">Любая</span>
+							<span class="stat__label">Температура</span>
+						</div>
+						<div class="stat">
+							<span class="stat__value">±1 мм</span>
+							<span class="stat__label">Точность</span>
+						</div>
+					</div>
+					
+					<ul class="card__features">
+						<li class="feature feature--plus">
+							<img src="images/feature-icons/okey.png" alt="" class="feature__icon">
+							<span>Можно ходить сразу</span>
+						</li>
+						<li class="feature feature--plus">
+							<img src="images/feature-icons/okey.png" alt="" class="feature__icon">
+							<span>Без воды и грязи</span>
+						</li>
+					</ul>
+				</div>
+
+				<div class="comparison-card card-wet">
+					<div class="card__ribbon card__ribbon--wet">Традиционный подход</div>
+					<div class="card__header">
+						<div class="card__icon">
+							<img src="images/feature-icons/water.png" alt="Иконка" width="100" height="100">
+						</div>
+						<h3 class="card__title">Мокрая стяжка</h3>
+					</div>
+					
+					<div class="card__stats">
+						<div class="stat">
+							<span class="stat__value">28 дней</span>
+							<span class="stat__label">Скорость монтажа</span>
+						</div>
+						<div class="stat">
+							<span class="stat__value">150 кг/м²</span>
+							<span class="stat__label">Нагрузка</span>
+						</div>
+						<div class="stat">
+							<span class="stat__value">От +5°C</span>
+							<span class="stat__label">Температура</span>
+						</div>
+						<div class="stat">
+							<span class="stat__value">±5 мм</span>
+							<span class="stat__label">Точность</span>
+						</div>
+					</div>
+					
+					<ul class="card__features">
+						<li class="feature feature--minus">
+							<img src="images/feature-icons/no.png" alt="" class="feature__icon">
+							<span>Долгое высыхание</span>
+						</li>
+						<li class="feature feature--minus">
+							<img src="images/feature-icons/no.png" alt="" class="feature__icon">
+							<span>Мокрые процессы</span>
+						</li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="comparison-cta">
+				<p class="comparison-cta__text">Очевидно, что сухая стяжка — выбор в пользу качества и скорости</p>
+				<a href="pages/calculation/calculation.html" class="comparison-cta__btn">Рассчитать стоимость</a>
+			</div>
+		</div>
+	</section>
+	<section class="work-clock">
+		<div class="container">
+			<div class="work-clock__header">
+				<span class="work-clock__label">РАСПИСАНИЕ</span>
+				<h2 class="work-clock__title">Один день — готовый пол</h2>
+				<p class="work-clock__subtitle">Точность до часа</p>
+			</div>
+
+			<div class="work-clock__face">
+				<div class="clock-line"></div>
+				
+				<div class="clock-dot clock-dot--morning" style="--dot-color: #E5D5C0;">
+					<span class="dot"></span>
+					<div class="dot-content">
+						<h3 class="dot-title">Утро</h3>
+						<p class="dot-text">Доставка, занос материалов, подготовка</p>
+					</div>
+				</div>
+
+				<div class="clock-dot clock-dot--day" style="--dot-color: #C0D0C0;">
+					<span class="dot"></span>
+					<div class="dot-content">
+						<h3 class="dot-title">День</h3>
+						<p class="dot-text">Демонтаж старого пола с выносом мусора</p>
+					</div>
+				</div>
+
+				<div class="clock-dot clock-dot--afternoon" style="--dot-color: #D6C0A8;">
+					<span class="dot"></span>
+					<div class="dot-content">
+						<h3 class="dot-title">Обед</h3>
+						<p class="dot-text">Выравнивание засыпки + звукоизоляция</p>
+					</div>
+				</div>
+
+				<div class="clock-dot clock-dot--evening" style="--dot-color: #6A8078;">
+					<span class="dot"></span>
+					<div class="dot-content">
+						<h3 class="dot-title">Вечер</h3>
+						<p class="dot-text">Монтаж ГВЛ, финишная уборка, сдача</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section id="promo" class="promo-section">
+		<div class="container">
+			<div class="promo-card">
+				<div class="promo-header">
+					<span class="promo-label">ОСОБОЕ ПРЕДЛОЖЕНИЕ</span>
+				</div>
+				
+				<div class="promo-grid">
+					<div class="promo-left">
+						<div class="promo-sticker">
+							<div class="promo-sticker__number">−1000₽</div>
+							<div class="promo-sticker__caption">за каждый 10 м²</div>
+						</div>
+						
+						<ul class="promo-list">
+							<li class="promo-list__item">
+								<span class="promo-list__marker"></span>
+								<span>При заказе от 20 м²</span>
+							</li>
+							<li class="promo-list__item">
+								<span class="promo-list__marker"></span>
+								<span>Не суммируется с другими акциями</span>
+							</li>
+						</ul>
+					</div>
+					
+					<div class="promo-right">
+						<div class="promo-coupon-frame">
+							<img src="images/coupon.jpg" alt="Купон" class="promo-coupon__image">
+						</div>
+						<a href="pages/coupon.html" target="_blank" class="promo-button">
+							Распечатать купон
+						</a>
+					</div>
+				</div>
+				
+				<div class="promo-note">
+					<span class="promo-note__strong">Как использовать:</span>
+					Распечатайте купон, покажите мастеру при замере, получите скидку
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="reviews-section" id="reviews">
+		<div class="container">
+			<div class="reviews-header" data-aos="fade-up">
+				<h2 class="reviews-title">ОТЗЫВЫ НАШИХ КЛИЕНТОВ</h2>
+				<p class="reviews-subtitle">Что говорят о нас на <strong>Яндекс.Картах</strong></p>
+			</div>
+		</div>
+
+		<div class="reviews-widget-wrapper" data-aos="fade-up" data-aos-delay="100">
+			<div class="yandex-widget-container">
+				<iframe src="https://yandex.ru/maps-reviews-widget/1114437166?comments" 
+						title="Отзывы на Яндекс.Картах"
+						loading="lazy">
+				</iframe>
+			</div>
+		</div>
+
+		<div class="container">
+			<div class="reviews-actions" data-aos="fade-up" data-aos-delay="200">
+				<a href="https://yandex.ru/maps/org/skoropol/1114437166/reviews/" 
+					target="_blank" 
+					class="reviews-all-btn" 
+					rel="noopener">
+					Все отзывы на Яндекс.Картах
+				</a>
+				<a href="https://yandex.ru/maps/org/skoropol/1114437166/reviews/add/" 
+					target="_blank" 
+					class="reviews-add-btn" 
+					rel="noopener">
+					Оставить свой отзыв
+				</a>
+			</div>
+		</div>
+	</section>
+	<div id="footer-container"></div>
+	<div class="popup-overlay" id="popupOverlay" aria-hidden="true" role="dialog" aria-labelledby="popupTitle">
+		<div class="popup" id="popup">
+			<button class="close-btn" id="closeBtn" aria-label="Закрыть окно">&times;</button>
+			<h2 id="popupTitle">ОСТАВЬТЕ ЗАЯВКУ</h2>
+			<p class="popup__subtitle">Мы свяжемся с вами в ближайшее время</p>
+			<form class="popup-form" id="consultForm">
+				<input type="text" placeholder="ВАШЕ ИМЯ" required aria-label="Ваше имя">
+				<input type="tel" inputmode="tel" pattern="[0-9]*" placeholder="+7 (000) 000-00-00" required aria-label="Номер телефона" id="phoneInput" maxlength="18">
+				<button type="submit" class="popup__submit-btn">ОСТАВИТЬ ЗАЯВКУ</button>
+				<label class="popup__checkbox">
+					<input type="checkbox" required>
+					<span>Я согласен с политикой конфиденциальности</span>
+				</label>
+			</form>
+		</div>
+	</div>
+	<script src="js/loadTemplates.js"></script>
+	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+	<script src="js/popup.js"></script>
+	<script src="js/phone-ripple.js"></script>
+	<script src="js/accordeon.js"></script>
+	<script src="js/slider.js"></script>
+	<script src="js/comparison.js"></script>
+	<script src="js/prices.js"></script>
+	<script src="js/aos-init.js"></script>
+</body>
+</html>
