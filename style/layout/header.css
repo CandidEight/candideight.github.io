@@ -590,3 +590,9 @@
 .nav__item--has-dropdown.open .nav__dropdown-arrow {
 	transform: rotate(180deg);
 }
+
+.header--scrolled .nav__container.active {
+	background: rgba(250, 245, 240, 0.98);
+	backdrop-filter: blur(15px) saturate(180%);
+	-webkit-backdrop-filter: blur(15px) saturate(180%);
+}
