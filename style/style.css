@@ -137,3 +137,135 @@ svg * {
 	--primary: #1A4A40;
 	--accent: #B7A286;
 }
+
+/* ===== RESPONSIVE FIXES ===== */
+/* Контейнеры - единые отступы */
+.container {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 20px;
+}
+
+/* Планшеты */
+@media (max-width: 1024px) {
+	.container {
+		padding: 0 30px;
+	}
+}
+
+/* Мобилы */
+@media (max-width: 768px) {
+	/* Основные отступы */
+	.container {
+		padding: 0 16px;
+	}
+	
+	/* Секции - уменьшаем паддинги */
+	.advantages,
+	.guarantee-section,
+	.premium-prices,
+	.work-clock,
+	.comparison-section,
+	.promo-section,
+	.reviews-section {
+		padding: 50px 0;
+	}
+	
+	/* Заголовки */
+	.advantages__title,
+	.guarantee-section__title,
+	.premium-prices__title,
+	.work-clock__title,
+	.comparison__title,
+	.reviews-title {
+		font-size: 28px;
+	}
+	
+	/* Сетки в 1 колонку */
+	.advantages__grid,
+	.guarantee-section__terms,
+	.premium-prices__grid,
+	.comparison-grid {
+		grid-template-columns: 1fr;
+		gap: 20px;
+	}
+	
+	/* Карточки */
+	.advantage-card,
+	.guarantee-term,
+	.price-card,
+	.comparison-card {
+		padding: 20px;
+	}
+	
+	/* Герой */
+	.hero__overlay {
+		padding: 30px 16px;
+		margin: 0 16px;
+	}
+	
+	.hero__title {
+		font-size: 24px;
+	}
+	
+	.hero__text {
+		font-size: 16px;
+	}
+	
+	.hero__btn {
+		padding: 12px 24px;
+		font-size: 14px;
+		min-width: auto;
+		width: 100%;
+		max-width: 280px;
+	}
+	
+	/* Футер */
+	.footer__container {
+		padding: 30px 16px;
+		gap: 30px;
+	}
+	
+	.footer__title {
+		font-size: 24px;
+	}
+	
+	.footer__contacts-grid {
+		grid-template-columns: 1fr;
+		gap: 20px;
+	}
+}
+
+/* Маленькие мобилы (iPhone SE, 5s) */
+@media (max-width: 480px) {
+	.container {
+		padding: 0 12px;
+	}
+	
+	.advantages,
+	.guarantee-section,
+	.premium-prices,
+	.work-clock,
+	.comparison-section,
+	.promo-section,
+	.reviews-section {
+		padding: 40px 0;
+	}
+	
+	.advantages__title,
+	.guarantee-section__title,
+	.premium-prices__title,
+	.work-clock__title,
+	.comparison__title,
+	.reviews-title {
+		font-size: 24px;
+	}
+	
+	.hero__title {
+		font-size: 22px;
+	}
+	
+	.hero__text {
+		font-size: 14px;
+	}
+}
