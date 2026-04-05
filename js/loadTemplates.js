@@ -17,6 +17,8 @@ function loadTemplates() {
 							e.preventDefault();
 							this.classList.toggle('active');
 							nav.classList.toggle('active');
+							const navActions = document.querySelector('.nav__actions');
+							if (navActions) navActions.classList.toggle('menu-active');
 							document.body.style.overflow = nav.classList.contains('active') ? 'hidden' : '';
 						};
 						
@@ -25,6 +27,8 @@ function loadTemplates() {
 								e.preventDefault();
 								burger.classList.remove('active');
 								nav.classList.remove('active');
+								const navActions = document.querySelector('.nav__actions');
+								if (navActions) navActions.classList.remove('menu-active');
 								document.body.style.overflow = '';
 								if (this.href && !this.href.startsWith('#')) {
 									window.location.href = this.href;
@@ -36,6 +40,8 @@ function loadTemplates() {
 							if (e.key === 'Escape' && nav.classList.contains('active')) {
 								burger.classList.remove('active');
 								nav.classList.remove('active');
+								const navActions = document.querySelector('.nav__actions');
+								if (navActions) navActions.classList.remove('menu-active');
 								document.body.style.overflow = '';
 							}
 						};

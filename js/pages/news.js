@@ -17,7 +17,7 @@ function loadNews() {
 	if (currentPath.includes('materials') || currentPath.includes('services')) {
 		console.log('Загружаем новости...');
 		
-		fetch('/skoropol/templates/news.html')
+		fetch('/templates/news.html')
 			.then(response => {
 				console.log('Ответ от сервера:', response);
 				console.log('Статус:', response.status);

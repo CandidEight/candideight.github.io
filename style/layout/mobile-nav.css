@@ -10,7 +10,7 @@
 		align-items: center;
 		justify-content: center;
 		position: relative;
-		z-index: 1001;
+		z-index: 1002;
 	}
 	
 	.nav__burger .burger {
@@ -24,7 +24,7 @@
 		display: block;
 		width: 100%;
 		height: 2px;
-		background: #ffffff;
+		background: #fff;
 		position: absolute;
 		left: 0;
 		transition: all 0.3s ease;
@@ -34,9 +34,27 @@
 	.nav__burger span:nth-child(2) { top: 50%; transform: translateY(-50%); }
 	.nav__burger span:nth-child(3) { bottom: 0; }
 	
-	.nav__burger.active span:nth-child(1) { transform: translateY(8px) rotate(45deg); }
-	.nav__burger.active span:nth-child(2) { opacity: 0; }
-	.nav__burger.active span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+	.nav__burger.active .burger span:nth-child(1) {
+		transform: translateY(8px) rotate(45deg);
+		background-color: #ffffff;
+	}
+	
+	.nav__burger.active .burger span:nth-child(2) {
+		opacity: 0;
+	}
+	
+	.nav__burger.active .burger span:nth-child(3) {
+		transform: translateY(-8px) rotate(-45deg);
+		background-color: #ffffff;
+	}
+	
+	.nav__burger.active {
+		background: transparent;
+	}
+	
+	.nav__burger.active .burger span {
+		background-color: #ffffff;
+	}
 	
 	.nav__container {
 		position: fixed;
@@ -221,5 +239,23 @@
 	
 	.nav__highlight {
 		display: none;
+	}
+
+	.nav__actions {
+		display: flex;
+		align-items: center;
+		gap: 8px;
+	}
+
+	.header.header--scrolled .nav__actions {
+		display: flex;
+		align-items: center;
+		gap: 8px;
+	}
+
+	.header.header--scrolled .nav__burger {
+		display: flex;
+		visibility: visible;
+		opacity: 1;
 	}
 }
