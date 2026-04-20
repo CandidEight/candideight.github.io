@@ -1,9 +1,7 @@
 .tech-page {
-	max-width: none;
 	width: 100%;
 	margin: 0;
-	padding: 140px 0 30px 0;
-	box-sizing: border-box;
+	padding: 140px 0 30px;
 	background: #ffffff;
 	position: relative;
 	overflow: hidden;
@@ -64,7 +62,7 @@
 
 .page-title {
 	font-family: 'Montserrat', sans-serif;
-	font-size: 4rem;
+	font-size: clamp(1.8rem, 6vw, 4rem);
 	font-weight: 600;
 	color: #1a1a1a;
 	margin-bottom: 20px;
@@ -74,7 +72,7 @@
 
 .page-subtitle {
 	font-family: 'Inter', sans-serif;
-	font-size: 1.1rem;
+	font-size: clamp(0.85rem, 2.5vw, 1.1rem);
 	color: #5a5a5a;
 	font-weight: 300;
 	line-height: 1.6;
@@ -82,7 +80,7 @@
 
 .section-title {
 	font-family: 'Montserrat', sans-serif;
-	font-size: 2.2rem;
+	font-size: clamp(1.3rem, 4vw, 2.2rem);
 	font-weight: 300;
 	color: #1a1a1a;
 	margin-bottom: 20px;
@@ -103,7 +101,7 @@
 
 .constructions-grid {
 	display: grid;
-	grid-template-columns: repeat(2, 1fr);
+	grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
 	gap: 40px;
 	margin-bottom: 40px;
 }
@@ -111,14 +109,14 @@
 .construction-card {
 	background: #ffffff;
 	border-radius: 16px;
-	padding: 40px;
-	box-shadow: 0 30px 60px -20px rgba(0,0,0,0.25), 0 10px 25px -10px rgba(0,0,0,0.15);
+	padding: clamp(20px, 4vw, 40px);
+	box-shadow: 0 30px 60px -20px rgba(0,0,0,0.25);
 	border: 1px solid #f0f0f0;
 	transition: all 0.2s ease;
 }
 
 .construction-card:hover {
-	box-shadow: 0 40px 80px -25px rgba(0,0,0,0.35), 0 15px 35px -15px rgba(0,0,0,0.2);
+	box-shadow: 0 40px 80px -25px rgba(0,0,0,0.35);
 	border-color: #e0e0e0;
 	transform: translateY(-3px);
 }
@@ -130,6 +128,7 @@
 	color: #1F3B3A;
 	display: flex;
 	align-items: center;
+	flex-wrap: wrap;
 	gap: 15px;
 	margin-bottom: 20px;
 }
@@ -144,17 +143,12 @@
 	text-transform: uppercase;
 }
 
-.construction-card:nth-child(3) .construction-card__badge {
-	background: #B7A286;
-}
-
-.construction-card:nth-child(4) .construction-card__badge {
-	background: #5a5a5a;
-}
+.construction-card:nth-child(3) .construction-card__badge { background: #B7A286; }
+.construction-card:nth-child(4) .construction-card__badge { background: #5a5a5a; }
 
 .construction-card__title {
 	font-family: 'Montserrat', sans-serif;
-	font-size: 1.6rem;
+	font-size: clamp(1.1rem, 3vw, 1.6rem);
 	font-weight: 400;
 	color: #1a1a1a;
 	margin-bottom: 15px;
@@ -180,7 +174,8 @@
 
 .construction-card__image {
 	width: 100%;
-	height: 140px;
+	height: auto;
+	aspect-ratio: 16 / 9;
 	border-radius: 8px;
 	overflow: hidden;
 	margin-top: 20px;
@@ -207,8 +202,8 @@
 	overflow: hidden;
 	background: #ffffff;
 	border-radius: 16px;
-	padding: 35px;
-	box-shadow: 0 30px 60px -20px rgba(0,0,0,0.25), 0 10px 25px -10px rgba(0,0,0,0.15);
+	padding: clamp(20px, 4vw, 35px);
+	box-shadow: 0 30px 60px -20px rgba(0,0,0,0.25);
 	border: 1px solid #f0f0f0;
 	margin-bottom: 30px;
 }
@@ -218,10 +213,17 @@
 	border-collapse: collapse;
 	font-family: 'Inter', sans-serif;
 	font-size: 0.95rem;
+	overflow-x: auto;
+	display: block;
+}
+
+.tech-table th,
+.tech-table td {
+	padding: 12px 15px;
+	text-align: left;
 }
 
 .tech-table th {
-	padding: 20px;
 	font-weight: 400;
 	color: white;
 	text-transform: uppercase;
@@ -231,7 +233,6 @@
 }
 
 .tech-table td {
-	padding: 18px 20px;
 	color: #2a2a2a;
 	border-bottom: 1px solid #f0f0f0;
 	font-weight: 300;
@@ -260,7 +261,6 @@
 	display: inline-block;
 	border-left: 4px solid #1F3B3A;
 	font-style: italic;
-	box-shadow: 0 15px 30px -15px rgba(0,0,0,0.1);
 }
 
 .table-note strong {
@@ -273,7 +273,7 @@
 
 .instruction-grid {
 	display: grid;
-	grid-template-columns: repeat(3, 1fr);
+	grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
 	gap: 30px;
 	margin-bottom: 40px;
 }
@@ -281,14 +281,14 @@
 .instruction-step {
 	background: #ffffff;
 	border-radius: 16px;
-	padding: 35px;
-	box-shadow: 0 25px 50px -20px rgba(0,0,0,0.2), 0 8px 20px -12px rgba(0,0,0,0.1);
+	padding: clamp(20px, 4vw, 35px);
+	box-shadow: 0 25px 50px -20px rgba(0,0,0,0.2);
 	border: 1px solid #f0f0f0;
 	transition: all 0.2s ease;
 }
 
 .instruction-step:hover {
-	box-shadow: 0 35px 70px -25px rgba(0,0,0,0.3), 0 12px 30px -15px rgba(0,0,0,0.15);
+	box-shadow: 0 35px 70px -25px rgba(0,0,0,0.3);
 	transform: translateY(-3px);
 }
 
@@ -316,7 +316,7 @@
 
 .step-title {
 	font-family: 'Montserrat', sans-serif;
-	font-size: 1.3rem;
+	font-size: clamp(1rem, 3vw, 1.3rem);
 	font-weight: 400;
 	color: #1a1a1a;
 	margin-bottom: 15px;
@@ -332,7 +332,8 @@
 
 .step-image {
 	width: 100%;
-	height: 150px;
+	height: auto;
+	aspect-ratio: 16 / 9;
 	border-radius: 8px;
 	overflow: hidden;
 	box-shadow: 0 10px 25px -12px rgba(0,0,0,0.15);
@@ -345,7 +346,7 @@
 }
 
 .instruction-note {
-	grid-column: span 3;
+	grid-column: 1 / -1;
 	background: #f8f8f8;
 	padding: 45px;
 	border-radius: 16px;
@@ -354,7 +355,6 @@
 	color: #2a2a2a;
 	text-align: center;
 	font-style: italic;
-	box-shadow: inset 0 0 0 1px rgba(0,0,0,0.03), 0 15px 30px -20px rgba(0,0,0,0.1);
 }
 
 .tech-cta {
@@ -365,7 +365,7 @@
 	max-width: 600px;
 	margin: 0 auto;
 	text-align: center;
-	padding: 60px 40px;
+	padding: clamp(30px, 5vw, 60px) clamp(20px, 5vw, 40px);
 	background: linear-gradient(135deg, var(--primary-dark), var(--primary));
 	border-radius: 40px;
 	box-shadow: 0 30px 60px -25px rgba(13, 61, 52, 0.4);
@@ -374,16 +374,15 @@
 
 .tech-cta .cta-content h2 {
 	font-family: 'Montserrat', sans-serif;
-	font-size: 2.2rem;
+	font-size: clamp(1.2rem, 4vw, 2.2rem);
 	font-weight: 300;
 	color: #ffffff;
 	margin: 0 0 15px 0;
-	text-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
 .tech-cta .cta-content p {
 	font-family: 'Inter', sans-serif;
-	font-size: 1.1rem;
+	font-size: clamp(0.85rem, 2.5vw, 1.1rem);
 	color: rgba(255,255,255,0.9);
 	margin-bottom: 40px;
 	font-weight: 300;
@@ -391,9 +390,9 @@
 
 .tech-cta__buttons {
 	display: flex;
+	flex-wrap: wrap;
 	gap: 20px;
 	justify-content: center;
-	flex-wrap: wrap;
 }
 
 .tech-cta__btn {
@@ -417,7 +416,6 @@
 	background: var(--accent);
 	color: #FFFFFF;
 	transform: translateY(-2px);
-	box-shadow: 0 20px 30px -15px rgba(0, 0, 0, 0.3);
 }
 
 .tech-cta__btn--secondary {
@@ -433,380 +431,53 @@
 	border-color: #FFFFFF;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 768px) {
+	.tech-page {
+		padding: 100px 0 20px;
+	}
+	
 	.tech-container {
 		padding: 0 20px;
 	}
-}
-
-@media (max-width: 1024px) {
-	.tech-page {
-		padding: 160px 0 30px 0;
-	}
-	
-	.page-title {
-		font-size: 3.2rem;
-	}
-	
-	.construction-card__image {
-		height: 130px;
-	}
-	
-	.instruction-grid {
-		grid-template-columns: repeat(2, 1fr);
-	}
 	
 	.instruction-note {
-		grid-column: span 2;
-	}
-	
-	.tech-cta {
-		padding: 60px 30px;
-	}
-	
-	.tech-cta__title {
-		font-size: 2.2rem;
-	}
-}
-
-@media (max-width: 900px) {
-	.constructions-grid {
-		gap: 30px;
-	}
-	
-	.construction-card {
-		padding: 30px;
-	}
-	
-	.construction-card__title {
-		font-size: 1.4rem;
-	}
-	
-	.table-wrapper {
-		padding: 25px;
-	}
-}
-
-@media (max-width: 768px) {
-	.tech-page {
-		padding: 140px 0 20px 0;
-	}
-	
-	.breadcrumbs {
-		margin-bottom: 30px;
-		font-size: 0.65rem;
-	}
-	
-	.page-header {
-		margin-bottom: 60px;
-	}
-	
-	.page-title {
-		font-size: 2.8rem;
-	}
-	
-	.page-subtitle {
-		font-size: 1rem;
-	}
-	
-	.section-title {
-		font-size: 2rem;
-		margin-bottom: 15px;
-	}
-	
-	.section-subtitle {
-		font-size: 0.9rem;
-		margin-bottom: 40px;
-	}
-	
-	.constructions-section {
-		margin-bottom: 80px;
-	}
-	
-	.constructions-grid {
-		grid-template-columns: 1fr;
-		gap: 25px;
-	}
-	
-	.construction-card {
-		padding: 30px;
-	}
-	
-	.construction-card__title {
-		font-size: 1.5rem;
-	}
-	
-	.construction-card__image {
-		height: 120px;
-		padding: 8px;
-	}
-	
-	.table-section {
-		margin-bottom: 80px;
-	}
-	
-	.table-wrapper {
-		padding: 25px;
-	}
-	
-	.instruction-section {
-		margin-bottom: 80px;
-	}
-	
-	.instruction-grid {
-		grid-template-columns: 1fr;
-		gap: 25px;
-	}
-	
-	.instruction-note {
-		grid-column: span 1;
-		padding: 35px 25px;
-	}
-	
-	.step-number {
-		width: 50px;
-		height: 50px;
-		font-size: 1.6rem;
-	}
-	
-	.step-title {
-		font-size: 1.2rem;
-	}
-	
-	.step-image {
-		height: 140px;
-	}
-	
-	.tech-cta {
-		margin: 60px 0 40px;
-		padding: 50px 30px;
-	}
-	
-	.tech-cta__title {
-		font-size: 2rem;
-	}
-	
-	.tech-cta__text {
-		font-size: 1rem;
-		margin-bottom: 30px;
+		padding: 30px 20px;
 	}
 	
 	.tech-cta__buttons {
 		flex-direction: column;
 		align-items: center;
-		gap: 15px;
 	}
 	
 	.tech-cta__btn {
 		width: 100%;
 		max-width: 280px;
-		padding: 14px 30px;
-		font-size: 0.75rem;
-	}
-}
-
-@media (max-width: 600px) {
-	.tech-page {
-		padding: 130px 0 20px 0;
 	}
 	
-	.page-title {
-		font-size: 2.5rem;
-	}
-	
-	.construction-card {
-		padding: 25px;
-	}
-	
-	.construction-card__title {
-		font-size: 1.4rem;
-	}
-	
-	.construction-card__image {
-		height: 110px;
-	}
-	
-	.step-image {
-		height: 130px;
+	.tech-table {
+		display: block;
+		overflow-x: auto;
 	}
 }
 
 @media (max-width: 480px) {
 	.tech-page {
-		padding: 120px 0 15px 0;
-	}
-	
-	.breadcrumbs {
-		margin-bottom: 25px;
-		font-size: 0.6rem;
-		letter-spacing: 2px;
-	}
-	
-	.page-header {
-		margin-bottom: 50px;
-	}
-	
-	.page-title {
-		font-size: 2.2rem;
-		letter-spacing: -0.5px;
-	}
-	
-	.page-subtitle {
-		font-size: 0.95rem;
-	}
-	
-	.section-title {
-		font-size: 1.8rem;
-	}
-	
-	.section-subtitle {
-		font-size: 0.85rem;
-		margin-bottom: 30px;
-	}
-	
-	.construction-card {
-		padding: 20px;
+		padding: 80px 0 15px;
 	}
 	
 	.construction-card__label {
-		font-size: 1rem;
-		margin-bottom: 15px;
-	}
-	
-	.construction-card__badge {
-		padding: 3px 10px;
-		font-size: 0.6rem;
-	}
-	
-	.construction-card__title {
-		font-size: 1.3rem;
-		margin-bottom: 10px;
-	}
-	
-	.construction-card__desc {
-		font-size: 0.85rem;
-		margin-bottom: 15px;
-	}
-	
-	.construction-card__note {
-		padding: 12px 15px;
-		font-size: 0.8rem;
-		margin-bottom: 15px;
-	}
-	
-	.construction-card__image {
-		height: 100px;
-		padding: 5px;
-		margin-top: 15px;
-	}
-	
-	.table-wrapper {
-		padding: 20px;
-	}
-	
-	.tech-table th {
-		padding: 15px 10px;
-		font-size: 0.65rem;
-	}
-	
-	.tech-table td {
-		padding: 12px 10px;
-		font-size: 0.8rem;
+		flex-direction: column;
+		align-items: flex-start;
 	}
 	
 	.table-note {
-		padding: 18px 20px;
-		font-size: 0.85rem;
-	}
-	
-	.instruction-step {
-		padding: 25px;
+		padding: 15px 20px;
+		font-size: 0.8rem;
 	}
 	
 	.step-number {
 		width: 45px;
 		height: 45px;
 		font-size: 1.5rem;
-		margin-bottom: 15px;
-	}
-	
-	.step-title {
-		font-size: 1.1rem;
-		margin-bottom: 10px;
-	}
-	
-	.step-desc {
-		font-size: 0.8rem;
-		margin-bottom: 15px;
-	}
-	
-	.step-image {
-		height: 120px;
-	}
-	
-	.instruction-note {
-		padding: 25px 20px;
-		font-size: 0.9rem;
-	}
-	
-	.tech-cta {
-		margin: 50px 0 30px;
-		padding: 40px 20px;
-	}
-	
-	.tech-cta__title {
-		font-size: 1.8rem;
-	}
-	
-	.tech-cta__text {
-		font-size: 0.95rem;
-		margin-bottom: 25px;
-	}
-	
-	.tech-cta__btn {
-		padding: 12px 25px;
-		font-size: 0.7rem;
-		max-width: 250px;
-	}
-}
-
-@media (max-width: 360px) {
-	.tech-page {
-		padding: 110px 0 15px 0;
-	}
-	
-	.page-title {
-		font-size: 2rem;
-	}
-	
-	.construction-card {
-		padding: 15px;
-	}
-	
-	.construction-card__title {
-		font-size: 1.2rem;
-	}
-	
-	.construction-card__image {
-		height: 90px;
-	}
-	
-	.step-number {
-		width: 40px;
-		height: 40px;
-		font-size: 1.3rem;
-	}
-	
-	.step-image {
-		height: 100px;
-	}
-	
-	.tech-cta__title {
-		font-size: 1.5rem;
-	}
-	
-	.tech-cta__btn {
-		padding: 10px 20px;
-		font-size: 0.65rem;
 	}
 }

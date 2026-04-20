@@ -316,7 +316,7 @@
 	background: rgba(13, 61, 52, 0.8);
 }
 
-@media screen and (max-width: 992px) {
+@media (max-width: 992px) {
 	.process-accordion__layout {
 		grid-template-columns: 1fr;
 		gap: 40px;
@@ -324,91 +324,33 @@
 	
 	.process-accordion__sidebar {
 		position: static;
-		align-items: center;
 	}
 	
-	.process-accordion__slider {
-		height: 400px;
-	}
-	
-	.process-accordion__header-inner {
-		max-width: 100%;
-	}
-	
+	.process-accordion__header-inner,
 	.process-accordion__content-inner {
 		max-width: 100%;
 	}
 }
 
-@media screen and (max-width: 1100px) {
-	.process-accordion__layout {
-		grid-template-columns: 1fr;
-		gap: 40px;
-	}
-	
-	.process-accordion__sidebar {
-		position: static;
-		align-items: center;
-	}
-	
-	.process-accordion__slider {
-		height: 400px;
-	}
-	
-	.process-accordion__header-inner {
-		max-width: 100%;
-	}
-	
-	.process-accordion__content-inner {
-		max-width: 100%;
-	}
-}
-
-@media screen and (max-width: 768px) {
-	.process-accordion {
-		padding: 60px 0;
-	}
-	
+@media (max-width: 768px) {
 	.process-accordion__title {
 		font-size: 24px;
 	}
 	
-	.process-accordion__header {
-		padding: 14px 0;
-	}
-	
 	.process-accordion__item-title {
 		font-size: 13px;
-		text-align: left;
-		order: 1;
-		flex: 1;
-		color: #333;
-	}
-	
-	.process-accordion__content-inner {
-		padding: 10px 0;
-	}
-	
-	.process-accordion__content p {
-		font-size: 12px;
-		color: #555;
 	}
 	
 	.process-accordion__description {
 		font-size: 15px;
-		color: #333;
 	}
 	
 	.process-accordion__ask-btn {
 		padding: 13px 24px;
 		font-size: 14px;
-		margin: 30px auto 0 auto;
 	}
 	
-	.process-accordion__slider {
-		min-height: 300px;
-	}
-	
+	.process-accordion__slider,
 	.slider-container {
 		min-height: 300px;
 	}
@@ -424,12 +366,8 @@
 	}
 	
 	.process-accordion__icon {
-		position: static;
-		transform: none;
-		margin: 0;
 		margin-left: auto;
 		order: 2;
-		color: var(--primary-dark);
 	}
 	
 	.process-accordion__header[aria-expanded="true"] .process-accordion__icon {
@@ -443,25 +381,16 @@
 	}
 }
 
-@media screen and (max-width: 480px) {
-	.process-accordion__header {
-		padding: 12px 0;
-	}
-	
+@media (max-width: 480px) {
 	.process-accordion__icon {
 		width: 16px;
 		height: 16px;
 		margin-left: 10px;
-		color: var(--primary-dark);
 	}
 	
 	.process-accordion__header-inner {
 		gap: 10px;
 		padding: 0 10px;
-	}
-	
-	.process-accordion__content-inner {
-		padding: 8px 0;
 	}
 	
 	.process-accordion__description {
@@ -471,13 +400,9 @@
 	.process-accordion__ask-btn {
 		width: 100%;
 		justify-content: center;
-		margin: 25px auto 0 auto;
 	}
 	
-	.process-accordion__slider {
-		min-height: 250px;
-	}
-	
+	.process-accordion__slider,
 	.slider-container {
 		min-height: 250px;
 	}

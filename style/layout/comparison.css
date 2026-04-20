@@ -307,45 +307,37 @@
 	.card-wet {
 		transform: scale(0.95);
 	}
-	
-	.card-wet:hover {
-		transform: scale(0.95) translateY(-5px);
-	}
 }
 
 @media (max-width: 768px) {
 	.comparison-section {
-		padding: 60px 20px;
+		padding: 50px 0;
 	}
 	
 	.comparison__title {
-		font-size: 36px;
+		font-size: 28px;
 	}
 	
 	.comparison-grid {
 		grid-template-columns: 1fr;
 		gap: 25px;
-		max-width: 500px;
 	}
 	
-	.card-dry, .card-wet {
+	.card-dry,
+	.card-wet {
 		transform: scale(1);
 	}
 	
-	.card-wet {
-		margin-top: 0;
-	}
-	
 	.card__title {
-		font-size: 26px;
+		font-size: 24px;
 	}
 	
 	.comparison-cta {
-		padding: 40px 30px;
+		padding: 30px 20px;
 	}
 	
 	.comparison-cta__text {
-		font-size: 18px;
+		font-size: 16px;
 	}
 	
 	.corner-top-left,
@@ -356,11 +348,11 @@
 
 @media (max-width: 480px) {
 	.comparison__title {
-		font-size: 32px;
+		font-size: 24px;
 	}
 	
 	.comparison-card {
-		padding: 30px 25px;
+		padding: 20px;
 	}
 	
 	.card__header {
@@ -370,17 +362,16 @@
 	}
 	
 	.card__stats {
-		gap: 20px;
-		margin-bottom: 25px;
-		padding-bottom: 25px;
+		gap: 15px;
 	}
 	
 	.stat__value {
-		font-size: 22px;
+		font-size: 20px;
 	}
 	
 	.comparison-cta__btn {
 		width: 100%;
-		padding: 14px 30px;
+		padding: 12px 20px;
+		font-size: 14px;
 	}
 }

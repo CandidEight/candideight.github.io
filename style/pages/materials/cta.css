@@ -11,7 +11,7 @@
 
 .materials-cta__title {
 	font-family: 'Montserrat', sans-serif;
-	font-size: 2rem;
+	font-size: clamp(1rem, 4vw, 2rem);
 	color: var(--primary-dark);
 	margin-bottom: 20px;
 	line-height: 1.3;
@@ -19,7 +19,7 @@
 
 .materials-cta__text {
 	font-family: 'Inter', sans-serif;
-	font-size: 1.2rem;
+	font-size: clamp(0.75rem, 2.5vw, 1.2rem);
 	color: #666;
 	line-height: 1.6;
 	margin-bottom: 40px;
@@ -27,21 +27,21 @@
 
 .materials-cta__buttons {
 	display: flex;
+	flex-wrap: wrap;
 	gap: 20px;
 	justify-content: center;
-	flex-wrap: wrap;
 }
 
 .materials-cta__btn {
 	display: inline-block;
-	padding: 18px 36px;
+	padding: clamp(10px, 2.5vw, 18px) clamp(16px, 4vw, 36px);
 	border-radius: 10px;
 	font-family: 'Inter', sans-serif;
 	font-weight: 600;
-	font-size: 1.1rem;
+	font-size: clamp(0.75rem, 2.5vw, 1.1rem);
 	text-decoration: none;
 	transition: all 0.3s ease;
-	min-width: 250px;
+	min-width: 200px;
 	text-align: center;
 }
 
@@ -70,8 +70,8 @@
 }
 
 @media (max-width: 768px) {
-	.materials-cta__title {
-		font-size: 1.7rem;
+	.materials-cta {
+		padding: 50px 16px;
 	}
 	
 	.materials-cta__buttons {
@@ -81,17 +81,18 @@
 	
 	.materials-cta__btn {
 		width: 100%;
-		max-width: 300px;
-		min-width: auto;
+		max-width: 280px;
 	}
 }
 
 @media (max-width: 480px) {
-	.materials-cta__title {
-		font-size: 1.4rem;
+	.materials-cta {
+		padding: 40px 12px;
 	}
-	
-	.materials-cta__text {
-		font-size: 1rem;
+}
+
+@media (min-width: 1600px) {
+	.materials-cta {
+		padding: 80px calc((100% - 1200px) / 2 + 20px);
 	}
 }

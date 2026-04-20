@@ -90,12 +90,34 @@
 
 @media (max-width: 768px) {
 	.advantages {
-		padding: 60px 20px;
+		padding: 50px 0;
 	}
+	
 	.advantages__grid {
 		grid-template-columns: 1fr;
+		gap: 20px;
 	}
+	
 	.advantages__title {
 		font-size: 28px;
+		margin-bottom: 30px;
+	}
+	
+	.advantage-card {
+		padding: 20px;
+	}
+}
+
+@media (max-width: 480px) {
+	.advantages__title {
+		font-size: 24px;
+	}
+	
+	.advantage-card__title {
+		font-size: 18px;
+	}
+	
+	.advantage-card__text {
+		font-size: 14px;
 	}
 }
